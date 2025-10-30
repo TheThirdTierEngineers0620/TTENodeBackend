@@ -13,6 +13,7 @@ cloudinary.config({
 router.delete('/delete', async (req, res) => {
   try {
     const { publicId } = req.body;
+    console.log('📥 Received delete request for publicId:', publicId);
 
     if (!publicId) {
       return res.status(400).json({
