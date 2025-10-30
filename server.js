@@ -15,6 +15,10 @@ app.use(express.json());
 // Routes
 app.use('/api/cloudinary', require('./routes/cloudinary'));
 
+app.get('/', (req, res) => {
+  res.send('Welcome to TTE Backend');
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ 
